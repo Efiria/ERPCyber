@@ -1,0 +1,19 @@
+﻿<Window x:Class="ERPcyber.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ERPcyber"
+        mc:Ignorable="d"
+        WindowStyle="ThreeDBorderWindow"
+        WindowStartupLocation="CenterScreen"
+        Title="Home" Height="720" Width="1280" MouseLeftButtonDown="Window_MouseDown">
+    <Grid>
+        <Grid Background="LightGray">
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="ERP Cyber" VerticalAlignment="Top" FontSize="24" FontStretch="ExtraCondensed"/>
+        </Grid>
+        <Grid Margin="5,50,5,5" Background="White">
+            <Button Click="next_page" Margin="189,129,153,95">Next</Button>
+        </Grid>
+    </Grid>
+</Window>
