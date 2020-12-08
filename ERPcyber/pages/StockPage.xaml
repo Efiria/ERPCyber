@@ -10,8 +10,7 @@
 
     <Grid>
         <Grid Background="LightGray">
-            <TextBlock Height="23" HorizontalAlignment="Left" Margin="10,10,0,0" x:Name="WelcomeHeading" Text="Stocks" VerticalAlignment="Top" FontSize="17" FontStretch="ExtraCondensed"/>
-            <TextBlock Height="23" HorizontalAlignment="Left" Margin="90,10,0,0" x:Name="TextBlockName"  VerticalAlignment="Top" FontSize="17" FontStretch="ExtraCondensed" />
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Stocks" VerticalAlignment="Top" FontSize="24" FontStretch="ExtraCondensed"/>
         </Grid>
         <Grid Margin="5,50,5,5" Background="White">
             

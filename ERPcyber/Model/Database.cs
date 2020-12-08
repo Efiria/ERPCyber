@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +11,11 @@ namespace ERPcyber.Model
 {
     class Database
     {
-        public List<String> getStock ()
+        public DataTable getStock ()
         {
 
             string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
             string query = "Select * from stocks";
-            List<String> row = new List<string>();
 
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
@@ -30,16 +30,22 @@ namespace ERPcyber.Model
                 // Execute the query
                 reader = commandDatabase.ExecuteReader();
 
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("Id");
+                dataTable.Columns.Add("Name");
+                dataTable.Columns.Add("Price");
+                dataTable.Columns.Add("Quantity");
+
                 if (reader.HasRows)
                 {
                     while (reader.Read())
                     {
-                        row.Add(reader.GetString(0));
-                        row.Add(reader.GetString(1));
-                        row.Add(reader.GetString(2));
-                        row.Add(reader.GetString(3));
-                        Console.WriteLine(reader.GetString(0));
-                        Console.WriteLine(row.ToArray());
+                        DataRow row = dataTable.NewRow();
+                        row["Id"] = reader.GetString(0);
+                        row["Name"] = reader.GetString(1);
+                        row["Price"] = reader.GetString(2);
+                        row["Quantity"] = reader.GetString(3);
+                        dataTable.Rows.Add(row);
                     }
                 }
                 else
@@ -50,7 +56,7 @@ namespace ERPcyber.Model
                 // Finally close the connection
                 databaseConnection.Close();
 
-                return row;
+                return dataTable;
             }
             catch (Exception ex)
             {
