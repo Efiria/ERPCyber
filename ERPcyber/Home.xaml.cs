@@ -1,17 +1,6 @@
 ﻿using ERPcyber.pages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace ERPcyber
 {
@@ -31,9 +20,34 @@ namespace ERPcyber
                 this.DragMove();
         }
 
-        private void next_page(object sender, RoutedEventArgs e)
+        private void stock_page(object sender, RoutedEventArgs e)
         {
-            this.Content = new StockPage();
+            StockPage win = new StockPage();
+            win.Show();
+            this.Close();
         }
+
+        private void customer_page(object sender, RoutedEventArgs e)
+        {
+            StockPage win = new StockPage();
+            win.Show();
+            this.Close();
+        }
+
+        private void shipping_page(object sender, RoutedEventArgs e)
+        {
+            StockPage win = new StockPage();
+            win.Show();
+            this.Close();
+        }
+
+        private void user_page(object sender, RoutedEventArgs e)
+        {
+            StockPage win = new StockPage();
+            win.Show();
+            this.Close();
+        }
+
+        
     }
 }
