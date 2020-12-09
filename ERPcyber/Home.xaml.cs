@@ -36,7 +36,7 @@ namespace ERPcyber
 
         private void shipping_page(object sender, RoutedEventArgs e)
         {
-            StockPage win = new StockPage();
+            OrderPage win = new OrderPage();
             win.Show();
             this.Close();
         }

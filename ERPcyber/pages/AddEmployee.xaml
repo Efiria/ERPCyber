@@ -8,7 +8,7 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         Title="AddEmployee" Height="360" Width="450" MouseLeftButtonDown="Window_MouseDown" ResizeMode="NoResize">
-    <Grid>
+    <Grid Background="BurlyWood">
         <TextBlock HorizontalAlignment="Center" FontSize="24" FontFamily="Comic Sans MS" Margin="0,20,0,25" >Add User</TextBlock>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="40,80,0,0" Name="textBlock1" Text="Username" VerticalAlignment="Top" Width="67" />
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="40,120,0,0" Name="textBlock2" Text="Email" VerticalAlignment="Top" Width="67" />
