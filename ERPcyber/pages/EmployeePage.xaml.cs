@@ -54,6 +54,12 @@ namespace ERPcyber.pages
             AddEmployee win = new AddEmployee();
             win.Show();
         }
+
+        private void refresh_click(object sender, RoutedEventArgs e)
+        {
+            display_User();
+        }
         
+
     }
 }

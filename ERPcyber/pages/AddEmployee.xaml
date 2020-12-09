@@ -7,12 +7,23 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-        Title="AddEmployee" Height="600" Width="450" MouseLeftButtonDown="Window_MouseDown">
+        Title="AddEmployee" Height="360" Width="450" MouseLeftButtonDown="Window_MouseDown" ResizeMode="NoResize">
     <Grid>
-        <TextBlock Name="McTextBlock" Background="LightBlue" HorizontalAlignment="Left" VerticalAlignment="Top">  
-            This is popup text
-        </TextBlock>
+        <TextBlock HorizontalAlignment="Center" FontSize="24" FontFamily="Comic Sans MS" Margin="0,20,0,25" >Add User</TextBlock>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="40,80,0,0" Name="textBlock1" Text="Username" VerticalAlignment="Top" Width="67" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="40,120,0,0" Name="textBlock2" Text="Email" VerticalAlignment="Top" Width="67" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="40,160,0,0" Name="textBlock3" Text="Password" VerticalAlignment="Top" Width="67" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="40,200,0,0" Name="textBlock4" Text="Password" VerticalAlignment="Top" Width="67" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="40,240,0,0" Name="textBlock5" Text="Role" VerticalAlignment="Top" Width="67" />
+        <TextBox HorizontalAlignment="Center" Name="UserName" VerticalAlignment="Top" Width="225" Margin="0,80,0,0" />
+        <TextBox HorizontalAlignment="Center" Name="UserEmail" VerticalAlignment="Top" Width="225" Margin="0,120,0,0" />
+        <PasswordBox HorizontalAlignment="Center" Name="Password" VerticalAlignment="Top" Width="225" Margin="0,160,0,0" />
+        <PasswordBox HorizontalAlignment="Center" Name="Password2" VerticalAlignment="Top" Width="225" Margin="0,200,0,0" />
         <Button Height="48" Width="140" Name="addpopup_button" Click="addpop_click" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="50,0,0,20">ADD</Button>
         <Button Height="48" Width="140" Name="closepopup_button" Click="closepop_click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,50,20">CLOSE</Button>
+        <ComboBox Name="user_role" Width="225" VerticalAlignment="Top" HorizontalAlignment="Center"  Margin="0,240,0,0">
+            <ComboBoxItem>admin</ComboBoxItem>
+            <ComboBoxItem>user</ComboBoxItem>
+        </ComboBox>
     </Grid>
 </Window>

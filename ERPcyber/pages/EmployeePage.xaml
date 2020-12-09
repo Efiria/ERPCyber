@@ -15,5 +15,6 @@
         <Button Height="48" Width="140" Name="home_button" Click="home_click" Margin="1127,3,5,638">HOME</Button>
         <DataGrid Name="dataGrid1" Margin="5,80,5,5" />
         <Button Height="48" Width="140" Name="adduser_button" Click="adduser_click" Margin="982,3,150,638">ADD USER</Button>
+        <Button Height="48" Width="140" Name="refresh_button" Click="refresh_click" Margin="837,3,295,638">REFRESH</Button>
     </Grid>
 </Window>
