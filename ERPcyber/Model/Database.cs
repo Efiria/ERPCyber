@@ -73,7 +73,7 @@ namespace ERPcyber.Model
         {
 
             string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
-            string query = "Select * from stocks";
+            string query = "Select * from users";
 
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);

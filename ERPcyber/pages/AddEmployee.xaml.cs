@@ -1,7 +1,5 @@
-﻿using ERPcyber.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,43 +15,33 @@ using System.Windows.Shapes;
 namespace ERPcyber.pages
 {
     /// <summary>
-    /// Logique d'interaction pour UsersPage.xaml
+    /// Logique d'interaction pour AddEmployee.xaml
     /// </summary>
-    public partial class EmployeePage : Window
+    public partial class AddEmployee : Window
     {
-        public EmployeePage()
+        public AddEmployee()
         {
             InitializeComponent();
-
-            display_User();
         }
-
-        private void display_User()
-        {
-            Database database = new Database();
-
-            DataTable employee = database.getEmployee();
-            dataGrid1.ItemsSource = employee.DefaultView;
-        }
-
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (Mouse.LeftButton == MouseButtonState.Pressed)
                 this.DragMove();
         }
 
-        private void home_click(object sender, RoutedEventArgs e)
+        private void closepop_click(object sender, RoutedEventArgs e)
         {
-            Home window = new Home();
-            window.Show();
             this.Close();
         }
 
-        private void adduser_click(object sender, RoutedEventArgs e)
+        private void addpop_click(object sender, RoutedEventArgs e)
         {
-            AddEmployee win = new AddEmployee();
-            win.Show();
+            //ADD NEW USER
+
+
+
+
+            this.Close();
         }
-        
     }
 }

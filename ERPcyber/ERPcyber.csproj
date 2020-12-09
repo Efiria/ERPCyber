@@ -160,6 +160,10 @@
       <DependentUpon>Login.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="pages\AddEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="pages\StockPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -172,6 +176,9 @@
   <ItemGroup>
     <Compile Include="Model\Database.cs" />
     <Compile Include="Model\Encrypt.cs" />
+    <Compile Include="pages\AddEmployee.xaml.cs">
+      <DependentUpon>AddEmployee.xaml</DependentUpon>
+    </Compile>
     <Compile Include="pages\StockPage.xaml.cs">
       <DependentUpon>StockPage.xaml</DependentUpon>
     </Compile>
