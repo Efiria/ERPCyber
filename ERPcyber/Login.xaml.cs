@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using ERPcyber.Model;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,6 +17,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+
 
 namespace ERPcyber
 {
@@ -59,8 +61,12 @@ namespace ERPcyber
                 string email = textBoxEmail.Text;
                 string password = passwordBox1.Password;
 
+
                 string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
-                string query = "Select * from users where Email = '" + email + "'  and password = '" + password + "'";
+                string query = "Select * from users where Email = '" + email + "'";
+
+                string key = Encrypt.getKey();
+                string encryptedpass = Encrypt.EncryptText(password, key);
 
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
@@ -77,8 +83,21 @@ namespace ERPcyber
 
                     if (reader.HasRows)
                     {
-                        home.Show();
-                        Close();
+
+                        while (reader.Read())
+                        {
+                            string dbpassword = reader.GetString(3);
+                            if (dbpassword == encryptedpass)
+                            {
+                                home.Show();
+                                Close();
+                            }
+                            else
+                            {
+                                errormessage.Text = "No user with this email/password.";
+                            }
+                        }
+                        
                     }
                     else
                     {

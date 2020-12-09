@@ -43,7 +43,7 @@ namespace ERPcyber
 
         private void user_page(object sender, RoutedEventArgs e)
         {
-            StockPage win = new StockPage();
+            EmployeePage win = new EmployeePage();
             win.Show();
             this.Close();
         }

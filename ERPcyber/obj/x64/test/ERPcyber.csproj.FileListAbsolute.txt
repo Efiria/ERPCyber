@@ -42,3 +42,5 @@ C:\Users\malor\Documents\Cybersecu\ERPcyber\ERPcyber\obj\x64\test\ERPcyber.exe
 C:\Users\malor\Documents\Cybersecu\ERPcyber\ERPcyber\obj\x64\test\ERPcyber.pdb
 C:\Users\malor\Documents\Cybersecu\ERPcyber\ERPcyber\obj\x64\test\pages\StockPage.g.cs
 C:\Users\malor\Documents\Cybersecu\ERPcyber\ERPcyber\obj\x64\test\pages\StockPage.baml
+C:\Users\malor\Documents\Cybersecu\ERPcyber\ERPcyber\obj\x64\test\pages\EmployeePage.g.cs
+C:\Users\malor\Documents\Cybersecu\ERPcyber\ERPcyber\obj\x64\test\pages\EmployeePage.baml

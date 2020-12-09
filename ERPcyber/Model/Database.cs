@@ -68,5 +68,15 @@ namespace ERPcyber.Model
 
             return null;
         }
+
+        public DataTable getEmployee()
+        {
+
+
+
+
+
+            return null;
+        }
     }
 }
