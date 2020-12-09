@@ -12,9 +12,9 @@
 
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Employee" VerticalAlignment="Top" FontSize="24" FontStretch="ExtraCondensed"/>
-        <Button Height="48" Width="140" Name="home_button" Click="home_click" Margin="1127,3,5,638">HOME</Button>
+        <Button Height="48" Width="140" Name="home_button" Click="home_click" Margin="1127,3,5,638" Background="#FFDDDDDD" BorderBrush="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Center">HOME</Button>
         <DataGrid Name="dataGrid1" Margin="5,80,5,5" />
-        <Button Height="48" Width="140" Name="adduser_button" Click="adduser_click" Margin="982,3,150,638">ADD USER</Button>
-        <Button Height="48" Width="140" Name="refresh_button" Click="refresh_click" Margin="837,3,295,638">REFRESH</Button>
+        <Button Height="48" Width="140" Name="adduser_button" Click="adduser_click" Margin="982,3,150,638" BorderBrush="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Center">ADD USER</Button>
+        <Button Height="48" Width="140" Name="refresh_button" Click="refresh_click" Margin="837,3,295,638" BorderBrush="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Center">REFRESH</Button>
     </Grid>
 </Window>

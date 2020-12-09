@@ -18,7 +18,7 @@
         <TextBox HorizontalAlignment="Center" Name="Lastname" VerticalAlignment="Top" Width="225" Margin="0,120,0,0" />
         <TextBox HorizontalAlignment="Center" Name="Address" VerticalAlignment="Top" Width="225" Margin="0,160,0,0" />
         <TextBox HorizontalAlignment="Center" Name="Country" VerticalAlignment="Top" Width="225" Margin="0,200,0,0" />
-        <Button Height="48" Width="140" Name="addpopup_button" Click="addpop_click" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="50,0,0,20">ADD</Button>
-        <Button Height="48" Width="140" Name="closepopup_button" Click="closepop_click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,50,20">CLOSE</Button>
+        <Button Height="48" Width="140" Name="addpopup_button" Click="addpop_click" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="50,0,0,20" BorderBrush="{x:Null}">ADD</Button>
+        <Button Height="48" Width="140" Name="closepopup_button" Click="closepop_click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,50,20" BorderBrush="{x:Null}">CLOSE</Button>
     </Grid>
 </Window>
