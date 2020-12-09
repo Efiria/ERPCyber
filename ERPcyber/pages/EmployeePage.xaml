@@ -14,5 +14,8 @@
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Employee" VerticalAlignment="Top" FontSize="24" FontStretch="ExtraCondensed"/>
         <Button Height="48" Name="home_button" Click="home_click" Margin="1157,2,5,637">HOME</Button>
         <DataGrid Name="dataGrid1" Margin="5,80,5,5" />
+        <Button>
+            
+        </Button>
     </Grid>
 </Window>
