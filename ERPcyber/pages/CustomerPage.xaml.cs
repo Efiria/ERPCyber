@@ -25,6 +25,11 @@ namespace ERPcyber.pages
         {
             InitializeComponent();
 
+            display_customer();
+        }
+
+        private void display_customer()
+        {
             Database database = new Database();
 
             DataTable customers = database.getCustomer();
@@ -35,6 +40,17 @@ namespace ERPcyber.pages
         {
             if (Mouse.LeftButton == MouseButtonState.Pressed)
                 this.DragMove();
+        }
+
+        private void adduser_click(object sender, RoutedEventArgs e)
+        {
+            AddCustomer win = new AddCustomer();
+            win.Show();
+        }
+
+        private void refresh_click(object sender, RoutedEventArgs e)
+        {
+            display_customer();
         }
 
 

@@ -48,3 +48,5 @@ C:\Users\malor\Documents\Cybersecu\ERPcyber\ERPcyber\obj\x64\test\pages\AddEmplo
 C:\Users\malor\Documents\Cybersecu\ERPcyber\ERPcyber\obj\x64\test\pages\AddEmployee.baml
 C:\Users\malor\Documents\Cybersecu\ERPcyber\ERPcyber\obj\x64\test\pages\CustomerPage.g.cs
 C:\Users\malor\Documents\Cybersecu\ERPcyber\ERPcyber\obj\x64\test\pages\CustomerPage.baml
+C:\Users\malor\Documents\Cybersecu\ERPcyber\ERPcyber\obj\x64\test\pages\AddCustomer.g.cs
+C:\Users\malor\Documents\Cybersecu\ERPcyber\ERPcyber\obj\x64\test\pages\AddCustomer.baml

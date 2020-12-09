@@ -15,7 +15,7 @@
         <Grid Margin="5,50,5,5" Background="White">
             <Grid Margin="268,10,-268,-10">
                 <Button Width="150" Height="150" Click="stock_page" Margin="10,242,1102,242">Stock</Button>
-                <Button Width="150" Height="150" Click="customer_page" Margin="187,242,925,242">Customer</Button>
+                <Button Width="150" Height="150" Click="customer_page" Margin="187,242,925,242" BorderBrush="#FFF88E55" Background="#FFF88E55">Customer</Button>
                 <Button Width="150" Height="150" Click="shipping_page" Margin="364,242,748,242">Shipping</Button>
                 <Button Width="150" Height="150" Click="user_page" Margin="542,242,570,242">Employee</Button>
             </Grid>
