@@ -304,5 +304,35 @@ namespace ERPcyber.Model
             return null;
         }
 
+        public void addOrder(int userId, string numOrder, int price)
+        {
+            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
+            string query = "INSERT INTO orders (numOrder,idcustomer,price) VALUES ('" + numOrder + "','" + userId + "','" + price + "')";
+
+            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+
+            try
+            {
+                // Open the database
+                databaseConnection.Open();
+
+                // Execute the query
+                reader = commandDatabase.ExecuteReader();
+
+
+                // Finally close the connection
+                databaseConnection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                // Show any error message.
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using ERPcyber.Model;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -79,7 +80,25 @@ namespace ERPcyber.pages
 
         private void addpop_click(object sender, RoutedEventArgs e)
         {
-           
+            //ADD NEW USER
+            string ordernum = OrderNumber.Text;
+            string orderprice = Price.Text;
+
+            string typeItem = (string)user_choose.SelectedItem;
+            if (typeItem != null && ordernum != null && orderprice != null)
+            {
+                string[] subs = typeItem.Split('_');
+                int userId = Int32.Parse(subs[0]);
+
+                Database db = new Database();
+                db.addOrder(userId,ordernum, Int32.Parse(orderprice));
+
+                this.Close();
+            } 
+            else
+            {
+                MessageBox.Show("You need to fill the form with valid information");
+            }
         }
     }
 }
