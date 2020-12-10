@@ -48,6 +48,10 @@ namespace ERPcyber
             this.Close();
         }
 
-        
+        private void logout_click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }  
+
     }
 }

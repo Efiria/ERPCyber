@@ -43,8 +43,8 @@ namespace ERPcyber.pages
 
         private void adduser_click(object sender, RoutedEventArgs e)
         {
-            //AddCustomer win = new AddCustomer();
-            //win.Show();
+            AddOrder win = new AddOrder();
+            win.Show();
         }
 
         private void refresh_click(object sender, RoutedEventArgs e)

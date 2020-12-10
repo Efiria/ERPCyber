@@ -11,12 +11,16 @@
     <Grid>
         <Grid Background="LightGray">
             <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="ERP Cyber" VerticalAlignment="Top" FontSize="24" FontStretch="ExtraCondensed"/>
+            <Button Height="38" Width="140" Name="logout_button" Click="logout_click" Margin="1127,3,5,638" BorderBrush="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Center" Background="White">LOGOUT</Button>
         </Grid>
-        <Grid Margin="5,50,5,5" Background="White">
+        <Grid Margin="5,50,5,5">
+            <Grid.Background>
+                <ImageBrush ImageSource="img/background.jpg"/>
+            </Grid.Background>
             <Grid Margin="268,10,-268,-10">
-                <Button Width="150" Height="150" Click="stock_page" Margin="10,242,1102,242" BorderBrush="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Center">Stock</Button>
+                <Button Width="150" Height="150" Click="stock_page" Margin="10,242,1102,242" BorderBrush="{x:Null}" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF6D616D">Stock</Button>
                 <Button Width="150" Height="150" Click="customer_page" Margin="187,242,925,242" BorderBrush="{x:Null}" Background="#FFF88E55" VerticalAlignment="Center" HorizontalAlignment="Center">Customers</Button>
-                <Button Width="150" Height="150" Click="shipping_page" Margin="364,242,748,242" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center">Orders</Button>
+                <Button Width="150" Height="150" Click="shipping_page" Margin="364,242,748,242" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFFFA9A0">Orders</Button>
                 <Button Width="150" Height="150" Click="user_page" Margin="542,242,570,242" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Center" Background="BurlyWood">Employees</Button>
             </Grid>
         </Grid>
