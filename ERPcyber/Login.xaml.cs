@@ -65,8 +65,8 @@ namespace ERPcyber
                 string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
                 string query = "Select * from users where Email = '" + email + "'";
 
-                string key = Encrypt.getKey();
-                string encryptedpass = Encrypt.EncryptText(password, key);
+                string hash = Encrypt.truc(password).ToLower();
+                Console.WriteLine(hash);
 
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
@@ -86,8 +86,8 @@ namespace ERPcyber
 
                         while (reader.Read())
                         {
-                            string dbpassword = reader.GetString(3);
-                            if (dbpassword == encryptedpass)
+                            string dbpassword = reader.GetString(5);
+                            if (dbpassword == hash)
                             {
                                 home.Show();
                                 Close();

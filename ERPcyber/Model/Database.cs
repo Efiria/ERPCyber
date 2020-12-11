@@ -129,7 +129,7 @@ namespace ERPcyber.Model
         public void addEmployee(string username, string email, string password, string role)
         {
             string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
-            string query = "INSERT INTO users (username,email,password,role) VALUES ('"+username+"','"+email+"','"+password+"','"+role+"')";
+            string query = "INSERT INTO users (username,email,password_web,role) VALUES ('"+username+"','"+email+"','"+password+"','"+role+"')";
 
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);

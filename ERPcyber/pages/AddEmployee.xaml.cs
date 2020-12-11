@@ -57,8 +57,7 @@ namespace ERPcyber.pages
                 if(username != null && Regex.IsMatch(email, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$") && value != null)
                 {
                     Database database = new Database();
-                    string key = Encrypt.getKey();
-                    string encryptedpass = Encrypt.EncryptText(password1, key);
+                    string encryptedpass = Encrypt.truc(password1).ToLower();
                     database.addEmployee(username, email, encryptedpass, value);
 
                     MessageBox.Show("User "+username+" added to the ERP");
