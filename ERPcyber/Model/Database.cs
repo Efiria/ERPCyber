@@ -14,7 +14,7 @@ namespace ERPcyber.Model
         public DataTable getStock ()
         {
 
-            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
+            string connectionString = "datasource=127.0.0.1;port=3306;username=brubru;password=hahamdp!123;database=test;";
             string query = "Select * from stocks";
 
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
@@ -72,7 +72,7 @@ namespace ERPcyber.Model
         public DataTable getEmployee()
         {
 
-            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
+            string connectionString = "datasource=127.0.0.1;port=3306;username=brubru;password=hahamdp!123;database=test;";
             string query = "Select * from users";
 
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
@@ -128,7 +128,7 @@ namespace ERPcyber.Model
 
         public void addEmployee(string username, string email, string password, string role)
         {
-            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
+            string connectionString = "datasource=127.0.0.1;port=3306;username=brubru;password=hahamdp!123;database=test;";
             string query = "INSERT INTO users (username,email,password_web,role) VALUES ('"+username+"','"+email+"','"+password+"','"+role+"')";
 
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
@@ -158,7 +158,7 @@ namespace ERPcyber.Model
 
         public DataTable getCustomer()
         {
-            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
+            string connectionString = "datasource=127.0.0.1;port=3306;username=brubru;password=hahamdp!123;database=test;";
             string query = "Select * from customer";
 
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
@@ -216,7 +216,7 @@ namespace ERPcyber.Model
 
         public void addCustomer(string firstname, string lastname, string address, string country)
         {
-            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
+            string connectionString = "datasource=127.0.0.1;port=3306;username=brubru;password=hahamdp!123;database=test;";
             string query = "INSERT INTO customer (Name,LastName,Address,Country) VALUES ('" + firstname + "','" + lastname + "','" + address + "','" + country + "')";
 
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
@@ -246,7 +246,7 @@ namespace ERPcyber.Model
 
         public DataTable getOrders()
         {
-            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
+            string connectionString = "datasource=127.0.0.1;port=3306;username=brubru;password=hahamdp!123;database=test;";
             string query = "SELECT orders.numOrder, customer.Name, customer.LastName, customer.Address, customer.Country, orders.price FROM orders LEFT JOIN customer ON orders.idcustomer = customer.id";
 
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
@@ -306,7 +306,7 @@ namespace ERPcyber.Model
 
         public void addOrder(int userId, string numOrder, int price)
         {
-            string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
+            string connectionString = "datasource=127.0.0.1;port=3306;username=brubru;password=hahamdp!123;database=test;";
             string query = "INSERT INTO orders (numOrder,idcustomer,price) VALUES ('" + numOrder + "','" + userId + "','" + price + "')";
 
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
